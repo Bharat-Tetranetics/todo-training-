@@ -1,0 +1,33 @@
+<h1>TODO</h1>
+<div class="addBar">
+
+    <div>
+      <label for="user">Username: 
+      </label>
+      <input [value]="user()" (input)="user.set($any($event.target).value)"  type="text" id="user">
+    </div>
+    <div>
+      <label for="task">Task: 
+      </label>
+      <input [value]="task()" (input)="task.set($any($event.target).value)"  type="text" id="task">
+    </div>
+    <button (click)="addTodo()">ADD</button>
+   
+</div>
+<div class="filter">
+  <p>STATUS FILTER :</p>
+  <select (change)="filter1.set($any($event.target).value)"  >
+    <option selected value="NA">N\A</option>
+    <option value="true">Completed</option>
+    <option value="false">Pending</option>
+    
+  </select>
+  <p>SEARCH FILTER:</p>
+  <input [value]="filter2()" type="text" placeholder="search...." (input)="filter2.set($any($event.target).value)">
+  <button (click)="statusFilter()">APPLY</button>
+</div>
+<div class="todoList">
+   @for (item of  filteredArray(); track  $index) {
+    <app-todo-item [todo]="item" [index]="$index" (deleteEvent)="deleteTodo($event)" (updateStatusEvent)="updateStatus($event)" />
+   }
+</div>
