@@ -1,0 +1,12 @@
+<div class="todoItem">
+    <p>{{todo().name}}</p>
+    <p>{{todo().description}}</p>
+    <p>{{todo().completed}}</p>
+    
+    <select [value]="todo().completed" (change)="updateStatusFn()" >
+       <option value="true">Completed</option>
+       <option value="false">Pending</option>
+       
+     </select>
+    <button (click)="deleteFn()">DELETE</button> 
+</div>
