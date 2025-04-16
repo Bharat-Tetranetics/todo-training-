@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(106, 93, 75);
+}
+h1{
+    text-align: center;
+}
+.addBar{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: beige;
+    padding: 30px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+div{
+    display: flex;
+    justify-content: space-between;
+}
+.todoList{
+    background-color: rgb(240, 160, 131);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.filter{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
