@@ -1,0 +1,23 @@
+*, html {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: beige;
+  padding: 15px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+}
