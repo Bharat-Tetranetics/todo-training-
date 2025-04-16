@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.header {
+    margin-top: 24px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.input {
+  padding: 16px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 500px;
+}
+
+input {
+  padding: 5px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-top: 10px;
+  
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+.allTasks {
+  margin-top: 10px;
+}
+
+.task {
+  display: flex;
+  gap: 5px;
+
+  margin-bottom: 10px;
+}
+
+select {
+    margin: 0px 12px;
+}

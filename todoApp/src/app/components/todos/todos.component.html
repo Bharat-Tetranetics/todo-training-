@@ -1,0 +1,59 @@
+<h1>Task Management App</h1>
+
+<div class="header">
+  <div class="input">
+    <p>Enter Task Info:</p>
+
+    <input [(ngModel)]="taskName" placeholder="Task Name" />
+    <input [(ngModel)]="userName" placeholder="User Name" />
+
+    <div>
+      <button (click)="handleSubmit()">Submit Task</button>
+    </div>
+  </div>
+
+  <div class="input">
+    <p>Search for Task:</p>
+    <input
+      [(ngModel)]="searchText"
+      (ngModelChange)="searchByTextAndFilter()"
+      placeholder="Search for Tasks"
+    />
+
+    <select [(ngModel)]="selectedFilter" (change)="searchByTextAndFilter()">
+      <option value="All">All</option>
+      <option value="Pending">Pending</option>
+      <option value="Completed">Completed</option>
+    </select>
+  </div>
+</div>
+
+<h3>All Tasks:</h3>
+
+<div class="allTasks">
+  @if (tasks.length === 0) {
+  <div class="task">
+    <p>No tasks found.</p>
+  </div>
+  } @else { @for (item of tasks; track item.id) {
+  <div class="task">
+    <div>
+      <p><strong>Task:</strong> {{ item.taskName }}</p>
+      <p><strong>User:</strong> {{ item.userName }}</p>
+    </div>
+
+    <p>
+      Status:
+      <span [style.color]="item.status === 'Completed' ? 'green' : 'orange'">
+        {{ item.status }}
+      </span>
+    </p>
+
+    <button (click)="toggleStatus(item)">
+      Mark as {{ item.status === "Pending" ? "Completed" : "Pending" }}
+    </button>
+
+    <button (click)="deleteTask(item)">Delete Task</button>
+  </div>
+  } }
+</div>
