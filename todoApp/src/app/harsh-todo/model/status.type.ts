@@ -1,4 +1,4 @@
 export type Status={
-    id:number,
-    status:boolean,
+    id:number|string,
+    status:string,
 }
