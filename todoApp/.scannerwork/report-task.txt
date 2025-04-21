@@ -1,0 +1,6 @@
+projectKey=Todo-By-Sachin2
+serverUrl=http://localhost:9000
+serverVersion=25.4.0.105899
+dashboardUrl=http://localhost:9000/dashboard?id=Todo-By-Sachin2
+ceTaskId=027ca613-bb42-47e7-8ca3-02bef16e30f9
+ceTaskUrl=http://localhost:9000/api/ce/task?id=027ca613-bb42-47e7-8ca3-02bef16e30f9
