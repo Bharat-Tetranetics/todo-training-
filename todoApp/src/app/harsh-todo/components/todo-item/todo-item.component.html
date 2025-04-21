@@ -1,11 +1,11 @@
 <div class="todoItem">
-    <p>{{todo().name}}</p>
-    <p>{{todo().description}}</p>
-    <p>{{todo().completed}}</p>
+    <p>{{todo().username}}</p>
+    <p>{{todo().task}}</p>
+    <p>{{todo().status}}</p>
     
-    <select [value]="todo().completed" (change)="updateStatusFn()" >
-       <option value="true">Completed</option>
-       <option value="false">Pending</option>
+    <select [value]="todo().status" (change)="updateStatusFn({id:this.todo().id, status:$any($event.target).value})" >
+       <option value="Completed">Completed</option>
+       <option value="Pending">Pending</option>
        
      </select>
     <button (click)="deleteFn()">DELETE</button> 

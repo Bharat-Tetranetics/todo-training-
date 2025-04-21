@@ -17,9 +17,9 @@
 <div class="filter">
   <p>STATUS FILTER :</p>
   <select (change)="filter1.set($any($event.target).value)"  >
-    <option selected value="NA">N\A</option>
-    <option value="true">Completed</option>
-    <option value="false">Pending</option>
+    <option selected value="">N\A</option>
+    <option value="Completed">Completed</option>
+    <option value="Pending">Pending</option>
     
   </select>
   <p>SEARCH FILTER:</p>
@@ -27,7 +27,8 @@
   <button (click)="statusFilter()">APPLY</button>
 </div>
 <div class="todoList">
-   @for (item of  filteredArray(); track  $index) {
-    <app-todo-item [todo]="item" [index]="$index" (deleteEvent)="deleteTodo($event)" (updateStatusEvent)="updateStatus($event)" />
+   @for (item of  itemArray(); track  $index) {
+    <app-todo-item [todo]="item" [index]="$index" (deleteEvent)="deleteTodo($event)" (updateStatusEvent)="updateStatus($event)"   />
+
    }
 </div>
